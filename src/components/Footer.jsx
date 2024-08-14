@@ -1,0 +1,81 @@
+import React from 'react'
+import { Logo } from './utils/Datas'
+import { Nav } from './utils/Datas'
+import { NavLink } from 'react-router-dom'
+
+function Footer() {
+
+    const date = new Date()
+    const currentYear = date.getFullYear()
+  return (
+    <div>
+
+
+    <footer className='py-10 mt-14 px-12 md:px-24 flex justify-between flex-wrap lg:flex-nowrap gap-10 lg:gap-0 bg-black'>
+
+
+
+    <div className='flex flex-col gap-5 w-full lg:w-[25%] mt-5'>
+    <div>
+    <img src={Logo} alt='logo' />
+    </div>
+    <p className=' text-base'>The Arit Fuller Foundation is a non-profit organisation dedicated to empowering individuals and communities through education, healthcare, and economic empowerment initiatives.</p>
+    </div>
+
+    <div className='mt-10'>
+    <p className='text-xl uppercase font-bold'>Quick Links</p>
+    <div className='flex flex-col justify-between gap-2 mt-5 self-start'>
+    {Nav.map((nav) => (
+      <NavLink 
+        key={nav.id} 
+        to={nav.link !== "#" ? nav.link : ""} 
+        className={({ isActive }) => 
+                 isActive && nav.link !== "#"
+          ? ' border-black font-bold' 
+          : nav.navi === 'Programs' 
+            ? 'line-through text-gray-400' 
+            : ''
+        }
+      >
+        <p>{nav.navi}</p>
+      </NavLink>
+    ))}
+    <p>Donations</p>
+  </div>
+    </div>
+
+    <div className='mt-10'>
+    <p className='text-xl uppercase font-bold'>Social Media</p>
+    <ul className='flex flex-col gap-3 mt-5 '>
+    <li>Facebook</li>
+    <li>Twitter</li>
+    <li>Instagram</li>
+    <li>Youtube</li>
+    </ul>
+    </div>
+
+    <div className='mt-10'>
+    <p className='text-xl uppercase font-bold'>CONTACT US</p>
+    <ul className='flex flex-col gap-3 mt-5 '>
+    <li>New York: (347) 526 3884</li>
+    <li>Nigeria: +234 803 363 0509</li>
+    <li>Nigeria: +234 816 926 7760</li>
+    <li> <a href='mailto:info@aritfuller.org'>Email: info@aritfuller.org</a> </li>
+    </ul>
+    </div>
+
+    </footer>
+
+    <div className='px-10 py-10 flex justify-center text-center font-space  border-t-[1px] bg-black border-[#545454]'>
+    <p>
+    © {currentYear} Arit Fuller-Harris Foundation Inc. All Rights Reserved
+    </p>
+
+
+    </div>
+      
+    </div>
+  )
+}
+
+export default Footer
