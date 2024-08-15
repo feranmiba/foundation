@@ -11,7 +11,7 @@ function Footer() {
     <div>
 
 
-    <footer className='py-10 mt-14 px-12 md:px-24 flex justify-between flex-wrap lg:flex-nowrap gap-10 lg:gap-0 bg-black'>
+    <footer className='py-10 mt-14 px-5 md:px-24 flex justify-between flex-wrap lg:flex-nowrap gap-10 lg:gap-0 bg-black'>
 
 
 
@@ -47,10 +47,10 @@ function Footer() {
     <div className='mt-10'>
     <p className='text-xl uppercase font-bold'>Social Media</p>
     <ul className='flex flex-col gap-3 mt-5 '>
-    <li>Facebook</li>
-    <li>Twitter</li>
-    <li>Instagram</li>
-    <li>Youtube</li>
+    <li> <a href='https://web.facebook.com/profile.php?id=61564480465591 '>Facebook</a> </li>
+    <li><a href='https://x.com/aritfuller'> Twitter </a> </li>
+    <li> <a href='https://www.instagram.com/aritfuller_harrisfoundationinc?igsh=d2Q1a3pqN25wZmFr&utm_source=qr'>Instagram</a> </li>
+    <li> <a href='https://m.youtube.com/@aritfullerfoundation4848'> Youtube</a></li>
     </ul>
     </div>
 

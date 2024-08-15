@@ -9,11 +9,95 @@ import Gallery6 from './image/gallery6.png'
 import Gallery7 from './image/gallery7.png'
 import Gallery8 from './image/gallery8.png'
 import Gallery9 from './image/gallery9.png'
+import CEO from './image/Ceo founder.png'
+import Parker from './image/parker.png'
+import Louis from './image/fara.png'
+import Pastor from './image/pastor.png'
+import Yuvete from './image/yuvete.png'
+import Hong from './image/hong.png'
+import Oba from './image/obasnjo.png'
+import { FaCalendar, FaLocationArrow, FaPhone } from 'react-icons/fa'
+
+
+export const Supporters = [
+    {
+        id: 1, 
+        img: Parker,
+        name: "Senator Kelvin Parker",
+        title: "New York Senator"
+    },
+    {
+        id: 2, 
+        img: Louis,
+        name: "Fara Loius",
+        title: "New York City Council"
+    },
+    {
+        id: 3, 
+        img: Pastor,
+        name: "Pastor Babajide Balogun",
+        title: "Director, Arit Fuller Foundation"
+    },
+    {
+        id: 4, 
+        img: Yuvete,
+        name: "Yvette D. Clarke",
+        title: "Congress Woman 9th District of New York"
+    },
+    {
+        id: 5, 
+        img: Hong,
+        name: "Dr. Hong Tao Tze",
+        title: "President, Federation of World Peace"
+    },
+    {
+        id: 6, 
+        img: Oba,
+        name: "H.E. Bola Obasanjo",
+        title: "Special Guest of Honour"
+    },
+
+]
+
+
+export const GalaNite = [
+    {
+        id: 1,
+        icon: <FaCalendar />,
+        title: "Date & Time", 
+        detail: [
+            "Saturday September 21st, 2024",
+            "5pm to 9pm", 
+            "Boarding starts by 4:30pm"
+        ]
+    },
+
+    {
+        id: 2,
+        icon: <FaLocationArrow />,
+        title: "Location",
+        detail: [
+            "Brooklyn Army Terminal, Pier 9 140 58 Street at 2nd Ave", 
+            "Long Island Marriot 101 Jame Dolittle Blvd. Uniiondale NY 11553"
+        ]
+    }, 
+
+    {
+        id: 3, 
+        icon: <FaPhone />,
+        title: "Contact",
+        detail: [
+            "800 228 9290",
+            "+234 803 351 4961",
+            "+1 (347) 526 3884"
+        ]
+    }
+]
 
 
 
 export {
-    Logo, Hero
+    Logo, Hero, CEO, Gallery6
 }
 
 export const GalleryPics  = [
@@ -51,6 +135,6 @@ export const Nav = [
     {
         id: 3, 
         navi: "Gala Nite", 
-        link: "#"
+        link: "/gala"
     },  
 ]

@@ -6,7 +6,7 @@ function Home() {
     <div>
 
     <section>
-    <div>
+    <div className='w-full h-screen object-cover'>
     <img src={Hero} alt='jkd' />
     </div>
     

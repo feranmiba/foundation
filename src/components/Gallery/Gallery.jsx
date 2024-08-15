@@ -1,11 +1,32 @@
-import React, { useState } from 'react';
-import { GalleryPics } from '../utils/Datas'; 
-import { GalleryVideos } from '../utils/Datas';
+import React, { useState, useEffect } from 'react';
+import { GalleryPics, GalleryVideos } from '../utils/Datas';
 
 function Gallery() {
   const [activeLink, setActiveLink] = useState(0);
+  const [images, setImages] = useState([]);
+  const [videos, setVideos] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   const choose = ["Photo", "Videos"];
+
+  useEffect(() => {
+    const loadContent = async () => {
+      setIsLoading(true);
+
+      if (activeLink === 0) {
+        await new Promise(resolve => setTimeout(resolve, 500)); 
+        setImages(GalleryPics);
+      } else {
+        // Simulating an async loading of videos
+        await new Promise(resolve => setTimeout(resolve, 500)); 
+        setVideos(GalleryVideos);
+      }
+
+      setIsLoading(false);
+    };
+
+    loadContent();
+  }, [activeLink]);
 
   return (
     <div>
@@ -27,30 +48,35 @@ function Gallery() {
         ))}
       </div>
 
-      <section className='px-10 lg:px-20'>
+      <section className='px-5 lg:px-20'>
         <section className='flex justify-center flex-wrap gap-10 lg:gap-5 mt-10'>
-          {activeLink === 0 && 
-            GalleryPics.map((gal, index) => (
-              <div key={index} className='lg:w-[32%]'>
-                <img src={gal} alt={`Gallery ${index + 1}`} />
-              </div>
-            ))
-          }
-          {activeLink === 1 && 
-            GalleryVideos.map((link, index) => (
-              <div key={index} className='w-full lg:w-[32%]'>
-                <iframe
-                  width="100%"
-                  height="auto"
-                  src={link}
-                  title={`YouTube video ${index + 1}`}
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
-            ))
-          }
+          {isLoading ? (
+            <p>Loading...</p>
+          ) : (
+            <>
+              {activeLink === 0 &&
+                images.map((gal, index) => (
+                  <div key={index} className='lg:w-[32%]'>
+                    <img src={gal} alt={`Gallery ${index + 1}`} loading="lazy" />
+                  </div>
+                ))}
+              {activeLink === 1 &&
+                videos.map((link, index) => (
+                  <div key={index} className='w-full lg:w-[32%]'>
+                    <iframe
+                      width="100%"
+                      height="auto"
+                      src={link}
+                      title={`YouTube video ${index + 1}`}
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      loading="lazy"
+                    ></iframe>
+                  </div>
+                ))}
+            </>
+          )}
         </section>
       </section>
     </div>
