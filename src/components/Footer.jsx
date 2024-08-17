@@ -11,7 +11,7 @@ function Footer() {
     <div>
 
 
-    <footer className='py-10 mt-14 px-5 md:px-24 flex justify-between flex-wrap lg:flex-nowrap gap-10 lg:gap-0 bg-black'>
+    <footer className='py-10  px-5 md:px-24 flex justify-between flex-wrap lg:flex-nowrap gap-10 lg:gap-0 bg-black'>
 
 
 

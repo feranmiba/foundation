@@ -11,7 +11,7 @@ function Gala() {
         <div className='lg:mt-5 mt-10 lg:w-[40%]'>
         <h1 className='text-4xl text-black'>14th Annual AFFI Awards  Banquet Yatch Cruise 2024</h1>
         <p className='text-[#5E6068] py-5'>Experience a distinctive setting that combines business and leisure with global personalities as well as networking etc.</p>
-        <a className='px-8 py-3 bg-[#D35515] rounded-full mt-5' href='https://www.eventbrite.com/e/14th-annual-affi-awards-dinner-banquet-yatch-cruise-2024-tickets-916503886797?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=ebdsshcopyurl' >Select Ticket</a>
+        <a className='px-8 py-3 bg-[#D35515] font-bold rounded-full mt-5' href='https://www.eventbrite.com/e/14th-annual-affi-awards-dinner-banquet-yatch-cruise-2024-tickets-916503886797?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=ebdsshcopyurl' >Buy Ticket</a>
         </div>
 
         <div className=' shadow-2xl lg:w-[45%]'>
@@ -34,28 +34,37 @@ function Gala() {
     </div>
 
 
-         <section className='flex justify-between lg:flex-nowrap flex-wrap'>
-       {GalaNite.map((gala) => (  <div className='lg:flex-col lg:flex lg:justify-center lg:items-center lg:w-[32%] lg:text-center mt-10 lg:mt-0' key={gala.id}>
-         <p className='w-[50px] h-[50px] border rounded-full bg-[#D35515] text-center items-center flex justify-center'> {gala.icon}  </p>
-         <p className='text-black mt-5 mb-5'>{gala.title}</p>
-        {gala.detail.map((det) => ( <ol>
-         <li className='text-[#3F4045] mt-2'>{det}</li> 
-         </ol>))}
-         </div>))}
+    <section className='flex flex-wrap justify-center lg:justify-between'>
+    {GalaNite.map((gala) => (
+      <div
+        className='flex justify-center items-center flex-col text-center w-full sm:w-[80%] lg:w-[32%] mt-10 lg:mt-0'
+        key={gala.id}
+      >
+        <p className='w-[50px] h-[50px] border rounded-full bg-[#D35515] flex justify-center items-center'>
+          {gala.icon}
+        </p>
+        <p className='text-black mt-5 text-xl mb-5'>{gala.title}</p>
+        <ol>
+          {gala.detail.map((det, index) => (
+            <li className='text-[#3F4045] mt-2' key={index}>
+              {det}
+            </li>
+          ))}
+        </ol>
+      </div>
+    ))}
+  </section>
+  
 
-         
-         
-         </section>
 
-
-         <section className='flex justify-between lg:justify-normal lg:space-x-72 lg:flex-nowrap flex-wrap mt-10'>
-         <div className='border px-7 py-5 bg-black text-white rounded-xl'>
+         <section className='flex lg:justify-start px-14 gap-5 lg:gap-0 lg:space-x-44 lg:flex-nowrap flex-wrap mt-10 justify-center'>
+         <div className='border px-7 py-5 bg-black text-white rounded-xl justify-center'>
          <p className='font-bold'>Dress Code</p>
          <p className='mt-2 text-sm'># African Wear</p>
          </div>
 
-         <div className='mt-5'>
-         <a className='font-bold border px-10 py-3 bg-[#D35515] text-white rounded-3xl self-start lg:mt-5' href='https://www.eventbrite.com/e/14th-annual-affi-awards-dinner-banquet-yatch-cruise-2024-tickets-916503886797?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=ebdsshcopyurl'>Buy Ticket</a>
+         <div className='mt-6'>
+         <a className='font-bold border px-14 py-3 bg-[#D35515] text-white rounded-3xl self-start lg:mt-5' href='https://www.eventbrite.com/e/14th-annual-affi-awards-dinner-banquet-yatch-cruise-2024-tickets-916503886797?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=ebdsshcopyurl'>Buy Ticket</a>
          </div>
 
          </section>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { GalleryPics, GalleryVideos } from '../utils/Datas';
+import {ClipLoader }from 'react-spinners'
 
 function Gallery() {
   const [activeLink, setActiveLink] = useState(0);
@@ -48,21 +49,21 @@ function Gallery() {
         ))}
       </div>
 
-      <section className='px-5 lg:px-20'>
+      <section className='px-5 pb-16 lg:px-20'>
         <section className='flex justify-center flex-wrap gap-10 lg:gap-5 mt-10'>
           {isLoading ? (
-            <p>Loading...</p>
+            <p> <ClipLoader /> </p>
           ) : (
             <>
               {activeLink === 0 &&
                 images.map((gal, index) => (
-                  <div key={index} className='lg:w-[32%]'>
+                  <div key={index} className='lg:w-[30%]'>
                     <img src={gal} alt={`Gallery ${index + 1}`} loading="lazy" />
                   </div>
                 ))}
               {activeLink === 1 &&
                 videos.map((link, index) => (
-                  <div key={index} className='w-full lg:w-[32%]'>
+                  <div key={index} className='w-full lg:w-[30%]'>
                     <iframe
                       width="100%"
                       height="auto"
