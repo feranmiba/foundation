@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Logo } from '../utils/Datas'
 import { FaAlignLeft, FaTimes } from 'react-icons/fa'
 import { AnimatePresence } from 'framer-motion'
@@ -8,6 +8,25 @@ import { Nav } from '../utils/Datas'
 
 function MobileNav() {
     const [visible, setVisible] = useState(false)
+    const [isFixed, setIsFixed] = useState(false);
+
+    // Function to handle scroll event
+    const handleScroll = () => {
+      if (window.scrollY > 50) { 
+        setIsFixed(true);
+      } else {
+        setIsFixed(false);
+      }
+    };
+  
+    useEffect(() => {
+      window.addEventListener('scroll', handleScroll);
+  
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, []);
+  
  
 
     const toggleMenu = () => {
@@ -16,16 +35,16 @@ function MobileNav() {
 
 
   return (
-    <div className='px-5 py-5 md:hidden'>
+    <div className={`px-5 py-3 w-[100%] bg-white shadow-lg  ${isFixed ? 'fixed top-0 left-0 z-50' : 'relative'} md:hidden`}>
 
     <section className='flex justify-between'>
     <div>
-    <img src={Logo} alt='logo' />
+    <img src={Logo} alt='logo' className='w-[60%]' />
     </div>
 
 
 
-    <div className='mt-6'>
+    <div className='mt-3'>
  <FaAlignLeft className='text-2xl text-black' onClick={toggleMenu} />
     </div>
     </section>
