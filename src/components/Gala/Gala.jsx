@@ -98,7 +98,7 @@ function Gala() {
 
     <section className='flex flex-wrap justify-center lg:justify-between '>
 
-   {Supporters.map((support) => ( <div className='flex-col flex lg:w-[32%] justify-center items-center mt-10' key={support.id}>
+   {Supporters.map((support) => ( <div className='flex-col flex lg:w-[32%] justify-center text-center items-center mt-10' key={support.id}>
     <img src={support.img} alt='jhhb'/>
 
     <p className='text-2xl mt-5'>{support.name}</p>

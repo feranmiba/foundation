@@ -73,14 +73,14 @@ function Home() {
 
     <section className='flex gap-5 justify-between flex-wrap lg:flex-nowrap'>
       <div>
-      <img src={Objective} alt='obj' className='lg:h-[100vh]' />
+      <img src={Objective} alt='obj'  />
       </div>
 
 
-      <section className=' lg:w-[60%] mt-5'>
+      <section className=' lg:w-[50%] mt-1'>
       <h1 className='font-medium text-3xl mb-6'>Our Objectives</h1>
-      <section className='flex-wrap flex  gap-5 '>
-      {obj.map((objs) => (  <div className='bg-[#F2F2F6] lg:w-[48%]  px-4 py-4 flex flex-col gap-4 rounded-lg'>
+      <section className='flex-wrap flex  gap-3 '>
+      {obj.map((objs) => (  <div className='bg-[#F2F2F6] lg:w-[48%]  px-3 py-4 flex flex-col gap-4 rounded-lg'>
         <p>
         <img src={objs.img} alt='' />
         </p>
