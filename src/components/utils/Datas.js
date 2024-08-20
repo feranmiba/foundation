@@ -35,6 +35,13 @@ import Oba from './image/obasnjo.png'
 import Success from './image/successful 1.png'
 import Support from './image/support.png'
 import Check from './image/check.png'
+import Gen21 from './image/2gen1.png'
+import Gen22 from './image/awka.png'
+import Gen23 from './image/cermony.png'
+import Anthony from './image/amore.png'
+import Jessica from './image/jessica.png'
+import Anna from './image/anna.png'
+import Event from './image/pcoming.png'
 import { FaCalendar, FaLocationArrow, FaPhone } from 'react-icons/fa'
 
 
@@ -59,6 +66,53 @@ export const UpcomingGen = [
         summ: "Experience a distinctive setting that combines business and leisure with global personalities as well as networking etc."
     }
 ]
+export const UpcomingGen2 = [
+    {
+        id: 1, 
+        img: Gen21,
+        title: "Arit Fuller Foundation Has Donated Books To Boost Educati..",
+        summ: "Arit fuller foundation has been donating books for the purpose of promoting literacy. Books provide access to knowledge, educa.."
+    },
+    {
+        id: 2, 
+        img: Gen22,
+        title: "Akwa Ibom First Lady Lauds AFFI as an NGO",
+        summ: "The wife of the Governor of Akwa Ibom State, Pastor (Mrs) Patience Umo Eno has lauded the Arit Fuller-Harris Foundation, a ..."
+    },
+    {
+        id: 3, 
+        img: Gen23,
+        title: "Why Arit Fuller Promotes Award Ceremony and Boat Cruise",
+        summ: "Experience a distinctive setting that combines business and leisure with global personalities as well as networking etc."
+    }
+]
+
+export const User = [
+    {
+        id: 1, 
+        img: Anthony,
+        title: "Anthony Moore",
+        position: "Sponsor",
+        summ: "Their commitment to education programs is inspiring. As a donor, I've seen how they efficiently channel resources to create meaningful opportunities. It's incredible to witness how they're shaping a brighter future for so many individuals."
+    },
+    {
+        id: 2, 
+        img: Jessica,
+        title: "Jessica Harrison",
+        position: "Volunteer",
+        summ: "Volunteering with AFFI has been an incredibly rewarding experience. Their dedication to empowering communities through education is unmatched. Seeing the direct impact on children's lives has been heartwarming."
+    },
+    {
+        id: 3, 
+        img: Anna,
+        title: "Anna Jacobs",
+        position: "Participants",
+        summ: "AFFI doesn't just provide aid; they instill hope. Their approach to supporting education is holistic and impactful. I've witnessed firsthand the dedication and passion of their team, making a real difference in the lives of those they reach."
+    }
+]
+
+
+
 
 export const Supporters = [
     {
@@ -162,7 +216,7 @@ export const lastProgram = [
 
 export {
     Logo, Hero, CEO, Gallery6, Values, Mission, Objective, Program, Promote, Success,
-    Support, Check
+    Support, Check, Event
 }
 
 export const obj = [

@@ -2,6 +2,7 @@ import React from 'react'
 import { Logo } from './utils/Datas'
 import { Nav } from './utils/Datas'
 import { NavLink } from 'react-router-dom'
+import Acree from './utils/image/accre.png'
 
 function Footer() {
 
@@ -66,11 +67,15 @@ function Footer() {
 
     </footer>
 
-    <div className='px-10 py-10 flex justify-center text-center font-space  border-t-[1px] bg-black border-[#545454]'>
+    <div className='px-5 lg:px-20 py-10 flex justify-center items-center gap-5 flex-col text-center font-space  border-t-[1px] bg-black border-[#545454]'>
+    <p>
+    <img src={Acree} alt='hdv' />
+    </p>
     <p>
     © {currentYear} Arit Fuller-Harris Foundation Inc. All Rights Reserved
     </p>
 
+    <p className='text-sm'>At Arit Fuller Foundation, we are dedicated to creating lasting change by empowering communities and improving lives. We guarantee that every project we undertake is guided by the principles of inclusivity, sustainability, and respect for the dignity of every individual.</p>
 
     </div>
       

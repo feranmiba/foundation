@@ -1,6 +1,7 @@
 import React from 'react'
 import Another from '../utils/image/gala.png'
 import { GalaNite, CEO, Gallery6, Supporters } from '../utils/Datas'
+import Register from '../Home/Register'
 
 function Gala() {
   return (
@@ -109,6 +110,9 @@ function Gala() {
     
     
     </section>
+
+
+    <Register />
       
     </div>
   )
